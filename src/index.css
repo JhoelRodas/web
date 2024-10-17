@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*@import 'antd/dist/antd.css';*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, cursive, Tahoma, sans-serif;
+}
+
+body {
+  color: black;
+  width: 100vw; 
+  overflow-x: hidden;
+  height: 100%;
+  background: rgb(228, 228, 228);
+  border-color: #3b3b3b;
+}
+
+.screen-max-width {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1120px;
+}
+
+.white-icon {
+  color: #FFFFFF;
+}
+
+.green-button {
+  background-color: #90CA4B;
+  color: #FFFFFF;
+  border-color: #446b14;
+}
+
+/* Estilo para el botón en su estado hover */
+.ant-btn:hover {
+  color: #000000;
+  border-color: #10421b !important; /* Color del borde al pasar el cursor */
+}
+
+/* Estilo para el botón en su estado activo */
+.ant-btn:active {
+  color: #000000;
+  border-color: #12411d !important; /* Color del borde al hacer clic */
+  background-color: #e4ac14;
+}
+
+.custom-button {
+  background-color: white;
+  border-color: #90CA4B; 
+  color: white;
+}
+
+.add-role-button {
+  margin-top: 16px;
+}
+
+@media (max-width: 600px) {
+  .screen-max-width {
+    max-width: 100%;
+    padding: 0 10px; /* Ajusta el padding para evitar el desbordamiento */
+  }
+
+  .navbar {
+    font-size: 14px; /* Tamaño de fuente más pequeño para mejor ajuste */
+  }
+
+  .table {
+    font-size: 12px; /* Tamaño de fuente más pequeño para tablas */
+    overflow-x: auto; /* Añade scroll horizontal si la tabla es demasiado ancha */
+  }
+
+  .button {
+    padding: 10px 15px; /* Ajusta el tamaño de los botones para pantallas pequeñas */
+  }
+}
+
+/* Pantallas medianas (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .screen-max-width {
+    max-width: 90%; /* Ajusta el max-width para pantallas más grandes que móviles */
+    padding: 0 20px;
+  }
+
+  .navbar {
+    font-size: 16px;
+  }
+
+  .table {
+    font-size: 14px;
+  }
+
+  .button {
+    padding: 12px 20px; /* Ajusta el tamaño de los botones para pantallas medianas */
+  }
+}
+
+/* Pantallas grandes (≥ 1025px) */
+@media (min-width: 1025px) {
+  .screen-max-width {
+    max-width: 1120px; /* Ancho máximo para pantallas grandes */
+    padding: 0 30px;
+  }
+
+  .navbar {
+    font-size: 18px;
+  }
+
+  .table {
+    font-size: 16px;
+  }
+
+  .button {
+    padding: 14px 25px; /* Ajusta el tamaño de los botones para pantallas grandes */
+  }
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px; /* Altura del scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del scrollbar */
+  border-radius: 10px; /* Bordes redondeados del scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color al pasar el mouse */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color del fondo del scrollbar */
+}
+/*--------calendario----------*/
+.highlight-yellow .react-calendar__tile {
+  background: #ffffcc;
+}
+
+.highlight-lightblue .react-calendar__tile {
+  background: #cceeff;
+}
+
+.highlight-green .react-calendar__tile {
+  background: #ccffcc;
+}
+/* Estilo base de las celdas del calendario */
+.react-calendar__tile {
+  padding: 1.25rem 1.5rem; /* Tamaño base */
+  font-size: 1.25rem; /* Texto base */
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  /* Reducir tamaño de celdas en pantallas medianas */
+  .react-calendar__tile {
+    padding: 1rem 1.25rem;
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Reducir aún más en pantallas pequeñas */
+  .react-calendar__tile {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Tamaño más pequeño en pantallas móviles */
+  .react-calendar__tile {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Personalizar el calendario en sí para que se reduzca en pantallas pequeñas */
+.custom-calendar {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+/* Estilos personalizados para el calendario */
+
+.specialist-date .react-calendar__tile {
+  font-size: 0.75rem; /* Reducir el tamaño de la fecha */
+  color: #1e3a8a; /* Color azul más oscuro */
+}
+
+.specialist-date .react-calendar__tile .text-xs {
+  background-color: #e0f7fa; /* Fondo suave para el texto de las horas */
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.specialist-date {
+  position: relative;
+}
+
+.specialist-date .react-calendar__tile-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.specialist-date .react-calendar__tile-content span {
+  font-size: 0.8rem; /* Reducir el tamaño del texto de las horas */
+  color: #333; /* Color más agradable para el texto */
+  background-color: #f0f9ff; /* Fondo suave para los horarios */
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
